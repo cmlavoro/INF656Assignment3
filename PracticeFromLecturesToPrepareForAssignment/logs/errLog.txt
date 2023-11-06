@@ -1,0 +1,60 @@
+04-06-2023	12:17:51 	 6c75c1bf-da08-4167-8c43-ee522a44a883 	 Error Not allowed by CORS 
+04-06-2023	12:17:51 	 519d14af-ae02-49c1-a145-8dca4b6e9f7d 	 Error Not allowed by CORS 
+11-05-2023	03:18:50 	 b6a62c64-0d9f-4743-b3e5-802dbfa3cf92 	 Error ENOENT: no such file or directory, stat '/Users/chrislavoro/Dropbox/Chris/Computer Science/FHSU/INF656_BackendDevelopment2/Week7/lecture2/views/index.html' 
+11-05-2023	04:20:17 	 b8cfa4fb-7a95-4513-89d4-590dcd300fab 	 Error Not allowed by CORS 
+11-05-2023	04:20:17 	 4775a1aa-2944-4d6b-90b7-ad46361bb492 	 Error Not allowed by CORS 
+11-05-2023	04:20:31 	 7f3be24a-ae28-4b1e-bc2e-96faf182d58c 	 Error Not allowed by CORS 
+11-05-2023	04:20:31 	 167541a9-6f23-4c4c-9dc1-dee42c08644a 	 Error Not allowed by CORS 
+11-05-2023	04:20:59 	 ccb5273e-da65-41cf-9d3e-dd2bb67b3856 	 Error Not allowed by CORS 
+11-05-2023	04:20:59 	 e86452be-97dc-4e5f-b05b-3e76a74671e4 	 Error Not allowed by CORS 
+11-05-2023	04:57:00 	 f5136241-7866-4011-b83a-4ee98f77a607 	 ReferenceError path is not defined 
+11-05-2023	04:57:31 	 6baeda31-213c-4a0a-a222-bd12ead8b742 	 ReferenceError path is not defined 
+11-05-2023	04:58:16 	 e68bee9a-f3e1-4a9e-a076-766db04ea774 	 ReferenceError path is not defined 
+11-05-2023	04:58:22 	 8cae5db0-8498-4929-90f4-cf8a0169e32d 	 ReferenceError path is not defined 
+11-05-2023	05:00:10 	 c0601801-0ea8-421b-9848-8a28c01ba966 	 ReferenceError path is not defined 
+11-05-2023	05:03:29 	 7cdd5694-0872-46bf-b091-e5c0f1f900d1 	 ReferenceError path is not defined 
+11-05-2023	05:03:41 	 8c4210a8-9553-40f0-9097-a126c2b5040b 	 ReferenceError path is not defined 
+11-05-2023	05:04:05 	 89e6449f-89f7-4d69-a3bd-c9c5b5e16f93 	 ReferenceError path is not defined 
+11-05-2023	05:04:32 	 13a64770-9172-49f0-8710-61560dfab1bd 	 ReferenceError path is not defined 
+11-05-2023	05:06:28 	 5049700f-1a01-4506-a46c-296b0a8386ac 	 Error ENOENT: no such file or directory, stat '/Users/chrislavoro/Dropbox/Chris/Computer Science/FHSU/INF656_BackendDevelopment2/Week8/views/subdir/index.html' 
+11-05-2023	05:09:04 	 fa0ae6c2-5ce8-4e05-8ee4-63fc1f443e2e 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:09:19 	 77ea8f12-4fd1-4853-b53f-c2dc9e8c9729 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:09:23 	 33495b27-6133-4dac-a88d-0992f0e895be 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:09:35 	 a860a6fb-9cf0-4d87-b4b6-410cbe704d0d 	 Error ENOENT: no such file or directory, stat '/Users/chrislavoro/Dropbox/Chris/Computer Science/FHSU/INF656_BackendDevelopment2/Week8/views/subdir/index.html' 
+11-05-2023	05:13:03 	 cf595253-aec8-4229-a800-fec4be0673b4 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:13:25 	 41686b83-eab3-4255-b3a3-22da7cb9a699 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:14:40 	 597c0770-9e0d-42bc-83ba-45cd3b2f3b54 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:15:25 	 b7eb3366-fc02-457a-aa91-8270fc76b1ef 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:27:45 	 e941dff4-c629-46f9-a4e7-d5b1603e5432 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:27:50 	 56d80891-3bfb-419d-ad34-0da2453ea60d 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:27:58 	 dd6e96fa-c0d5-43a2-af6f-95b49ae1da59 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:28:42 	 09e596b6-802e-4beb-88cd-7619990b925c 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:28:58 	 2a9f5909-ff5b-4c34-877b-6951348cd3ac 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:29:37 	 95591804-8f48-44f2-ad2f-3336d22a031e 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:29:41 	 d4b72d4d-a5bf-4c11-9ec0-b8965a54d878 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:29:52 	 100d3dbd-5cb4-4ac9-87df-568626d89f2e 	 Error ENOENT: no such file or directory, stat '/Users/chrislavoro/Dropbox/Chris/Computer Science/FHSU/INF656_BackendDevelopment2/Week8/views/subdir/index.html' 
+11-05-2023	05:30:46 	 b103c93a-6cb8-43e8-a26c-ad9c0ab1a34d 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:30:54 	 e49c2845-123b-40ac-9d63-708f9ebf379b 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:31:03 	 08738cf2-448e-491c-b839-3bf417f206d0 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:40:13 	 88095d02-7553-4198-8550-664b5d4d9607 	 Error ENOENT: no such file or directory, stat '/Users/chrislavoro/Dropbox/Chris/Computer Science/FHSU/INF656_BackendDevelopment2/Week8/viewsa/index.html' 
+11-05-2023	05:40:56 	 e4b9a36b-62ff-4740-880b-06a09c22a57a 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:41:14 	 48ee7b5d-a1c1-4ca9-86a1-368c9e01061e 	 Error ENOENT: no such file or directory, stat '/Users/chrislavoro/Dropbox/Chris/Computer Science/FHSU/INF656_BackendDevelopment2/Week8/viewsa/index.html' 
+11-05-2023	05:42:27 	 39f3a0ea-d075-409f-aaf3-072fb5e4983c 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:42:38 	 c81422d3-2b02-415c-a3a6-357ca7a848b1 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:44:09 	 916bd25b-9ce3-48b2-b43c-2dbffe8ec6b6 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:45:03 	 5d206148-cb92-433a-ab8a-1740011afa90 	 TypeError path must be a string to res.sendFile 
+11-05-2023	05:59:30 	 79724063-7416-4735-8035-8fdf2ea4c8d9 	 TypeError path must be a string to res.sendFile 
+11-05-2023	06:56:18 	 2d954332-8a83-47bc-b02c-c06a4c998a6f 	 TypeError Cannot read properties of undefined (reading 'lastname') 
+11-05-2023	07:00:19 	 a08b841c-f96b-4671-a964-1403ecfa07d8 	 TypeError Cannot read properties of undefined (reading 'id') 
+11-05-2023	07:01:21 	 1c76e541-f842-49fd-b277-ff6dc7baa45b 	 TypeError Cannot read properties of undefined (reading 'id') 
+11-05-2023	07:05:11 	 00fbb9c5-1a5a-4d28-9014-cbfb076d3d71 	 TypeError Cannot read properties of undefined (reading 'id') 
+11-05-2023	07:08:04 	 df405d58-9d93-47e9-8b99-749f3eddbee2 	 TypeError Cannot read properties of undefined (reading 'id') 
+11-05-2023	07:10:29 	 02cb53ee-dead-4726-9e27-c5a37c846fbb 	 TypeError Cannot read properties of undefined (reading 'id') 
+11-05-2023	07:12:27 	 fa6a7d03-7d17-460b-9f3c-653384ef903b 	 TypeError Cannot read properties of undefined (reading 'id') 
+11-05-2023	07:13:26 	 1db576e2-ca24-4cdf-8bff-c1e3307312e3 	 TypeError Cannot read properties of undefined (reading 'id') 
+11-05-2023	07:13:49 	 65117648-33a2-4e3d-8201-6a394e84beea 	 TypeError Cannot read properties of undefined (reading 'id') 
+11-05-2023	07:35:41 	 59a9a22d-4557-4e12-acf0-82fedfb3fa18 	 TypeError path must be a string to res.sendFile 
+11-05-2023	08:16:04 	 d62d7c22-9309-4dbb-b038-94bc3c030511 	 SyntaxError Unexpected token o in JSON at position 1 
+11-05-2023	08:17:00 	 4aef2245-eb4a-43ff-bdef-bfe0070b81a0 	 SyntaxError Unexpected token o in JSON at position 1 
+11-05-2023	09:07:29 	 fb62cde9-3409-4d90-a0ec-4496818ea687 	 TypeError path must be a string to res.sendFile 
+11-05-2023	09:13:29 	 5ca92aea-b015-4f81-a113-6a4d7487ce2c 	 TypeError path must be a string to res.sendFile 
