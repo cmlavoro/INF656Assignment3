@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "Name": "Fred Couples",
+    "Phone": "954-555-0001",
+    "Email": "fcouples@pga.com",
+    "Address": "123 Sesame Street"
+  },
+  {
+    "id": 2,
+    "Name": "Jack Nicklaus",
+    "Phone": "954-772-7923",
+    "Email": "jnicklaus@pga.com",
+    "Address": "456 Bourbon Blvd"
+  },
+  {
+    "id": 3,
+    "Name": "Tom Kite",
+    "Phone": "786-344-2491",
+    "Email": "tkite@pga.com",
+    "Address": "789 5th Avenue"
+  },
+  {
+    "id": 4,
+    "Name": "Sam Snead",
+    "Phone": "305-569-1140",
+    "Email": "ssnead@pga.com",
+    "Address": "379 Wonka Estates"
+  },
+  {
+    "id": 5,
+    "Name": "Lee Trevino",
+    "Phone": "954-479-3460",
+    "Email": "ltrevino@pga.com",
+    "Address": "915 N Broome Street"
+  }
+]
