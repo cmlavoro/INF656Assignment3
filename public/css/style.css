@@ -6,7 +6,7 @@
 
 body {
   font-size: 36px;
-  min-height: 100vh;
+  margin-top:25px;
   color: #fff;
   background-color: #000;
   display: grid;
@@ -45,6 +45,23 @@ a {
 }
 
 .myButton:hover {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.submitButton {
+  background-color: yellow;
+  color: black;
+  border: 5px solid #0088cc;
+  border-radius: 15px;
+  padding: 10px;
+  width: 100px;
+  text-align: center !important;
+  align-content: center;
+}
+
+.submitButton:hover {
   background-color: blue;
   color: white;
   cursor: pointer;

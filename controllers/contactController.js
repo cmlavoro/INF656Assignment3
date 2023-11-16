@@ -7,14 +7,19 @@ const data = {
     this.contacts = data;
 
     var jsonArray = [];
-        for (i in data) {
-            jsonArray.push(data[i]);
-        }
-        writeFile("model/contacts.json", JSON.stringify(jsonArray), "utf-8", function(err){
-          if (err) throw err;
-          console.log('Data Saved!');
-        });
-  }
+    for (i in data) {
+      jsonArray.push(data[i]);
+    }
+    writeFile(
+      "model/contacts.json",
+      JSON.stringify(jsonArray),
+      "utf-8",
+      function (err) {
+        if (err) throw err;
+        console.log("Data Saved!");
+      }
+    );
+  },
 };
 
 //Get all Contacts
@@ -32,22 +37,20 @@ const createNewContact = (req, res) => {
     Name: req.body.Name,
     Phone: req.body.Phone,
     Email: req.body.Email,
-    Address: req.body.Address
+    Address: req.body.Address,
   };
 
-  if (!newContact.Name || !newContact.Phone|| !newContact.Email) {
-    return res
-      .status(400)
-      .json({ message: "Name, Phone, and Email are required" });
+  if (!newContact.Name || !newContact.Phone || !newContact.Email) {
+    return res.redirect("/400");
   }
 
   data.setContacts([...data.contacts, newContact]);
-  res.status(201).json(data.contacts);
+  res.status(201).json(data.contacts).redirect(201, "/");
 };
 
 //Update a Contact
 const updateContact = (req, res) => {
-  const contact = data.contacts.find(c => c.id === parseInt(req.body.id));
+  const contact = data.contacts.find((c) => c.id === parseInt(req.body.id));
   if (!contact) {
     return res
       .status(400)
@@ -58,7 +61,9 @@ const updateContact = (req, res) => {
   if (req.body.Email) contact.Email = req.body.Email;
   if (req.body.Address) contact.Address = req.body.Address;
 
-  const filteredArray = data.contacts.filter(c => c.id !== parseInt(req.body.id));
+  const filteredArray = data.contacts.filter(
+    (c) => c.id !== parseInt(req.body.id)
+  );
   const unsortedArray = [...filteredArray, contact];
 
   data.setContacts(
@@ -69,20 +74,22 @@ const updateContact = (req, res) => {
 
 //Delete a Contact
 const deleteContact = (req, res) => {
-  const contact = data.contacts.find(c => c.id === parseInt(req.body.id));
+  const contact = data.contacts.find((c) => c.id === parseInt(req.body.id));
   if (!contact) {
     return res
       .status(400)
       .json({ message: `Contact ${req.body.id} is not found` });
   }
-  const filteredArray = data.contacts.filter(c => c.id !== parseInt(req.body.id));
+  const filteredArray = data.contacts.filter(
+    (c) => c.id !== parseInt(req.body.id)
+  );
   data.setContacts([...filteredArray]);
   res.json(data.contacts);
 };
 
 //Get a Contact
 const getContact = (req, res) => {
-  const contact = data.contacts.find(c => c.id === parseInt(req.params.id));
+  const contact = data.contacts.find((c) => c.id === parseInt(req.params.id));
   if (!contact) {
     return res
       .status(400)
