@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node Server</title>
     <link rel="stylesheet" href="../css/style.css">
-</head>
+    <script type="text/javascript">
+      let url = "http://localhost:3000/contact";
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => 
+          document.getElementById("dvContacts").innerHTML = createTable(data)
+        )
+        .catch((err) => {
+          throw err;
+        });
 
-<body>
-    <h1>Hello Express!</h1>
-</body>
+      function createTable(data) {
+        let table = "<table>";
+        table += "<tr><th>Id</th><th>Name</th><th>Phone</th><th>Email</th><th>Address</th></tr>";
+        data.forEach((item) => {
+          table += `<tr><td>${item.id}</td><td>${item.Name}</td><td>${item.Phone}</td><td>${item.Email}</td><td>${item.Address}</td></tr>`;
+        });
+        table += "</table>";
+        return table;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1 style="text-align: center;">Contacts</h1>
+    <div id="dvContacts"></div>
+  </body>
 
 </html>

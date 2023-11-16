@@ -12,3 +12,16 @@ body {
     display: grid;
     place-content: center;
 }
+
+table, td, tr, th {
+    padding: 20px;
+}
+
+th {
+    color: yellow;
+    text-align: left;
+}
+
+h1 {
+    color: orange
+}
