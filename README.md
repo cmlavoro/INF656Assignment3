@@ -5,4 +5,8 @@ via Terminal, run nodemon .\server.js
 
 Open browser and go to http://localhost:3000
 
-The list of Contacts will be displayed
+The list of Contacts will be displayed.
+
+Select a contact from the list, and additional information will be displayed.
+
+Select the Return to Contacts List button to return to the main list of contacts.

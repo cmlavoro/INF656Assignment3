@@ -6,6 +6,10 @@ router.get("^/$|/index(.html)?", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "views", "index.html"));
 });
 
+router.get("/c/:id", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "views", "contact.html"));
+});
+
 router.get("/new-page.html", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "views", "new-page.html"));
 });
