@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Contacts</h1>
+    <div style="text-align: center">
+      <button class="myButton" onclick="location.href='newcontact'">
+        Add New Contact
+      </button>
+    </div>
+    <div id="dvSaveResult" style="text-align: center;font-size: medium;color:lime"></div>
+    <div id="dvContacts"></div>
     <script type="text/javascript">
       let url = "http://localhost:3000/contact";
-      fetch(url)
+      fetchData(url);
+
+      function fetchData(url) {
+        fetch(url)
+        .then(success = true)
         .then((res) => res.json())
-        .then((data) => 
-          document.getElementById("dvContacts").innerHTML = createTable(data)
-        )
-        .catch((err) => {
-          throw err;
-        });
+        .then(
+            (data) => {
+              document.getElementById("dvContacts").innerHTML = createTable(data);
+              const queryString = window.location.search;
+              const urlParams = new URLSearchParams(queryString);
+              if (urlParams.has('s'))
+              {
+                let saveType = urlParams.get('s');
+                if(saveType == '0')
+                {
+                  document.getElementById("dvSaveResult").innerHTML = "<br/>New Contact Created!";
+                }
+                else {
+                  document.getElementById("dvSaveResult").innerHTML = "<br/>Contact Information Updated!";
+                }
+              }
+            }     
+          )
+          .catch((err) => {
+            fetchData(url);
+          });
+      }
 
       function createTable(data) {
         let table = "<table>";
         table += "<tr><th>Id</th><th>Name</th></tr>";
         data.forEach((item) => {
-          table += `<tr><td>${item.id}</td><td><a href='/c/${item.id}'>${item.Name}</a></td></tr>`;
+          table += `<tr><td>${item.id}</td><td><a href='/updatecontact/${item.id}'>${item.Name}</a></td></tr>`;
         });
         table += "</table>";
         return table;
       }
     </script>
-  </head>
-
-  <body>
-    <h1 style="text-align: center;">Contacts</h1>
-    <div style="text-align:center"><button class="myButton" onclick="location.href='newcontact'">Add New Contact</button></div>
-    <div id="dvContacts"></div>
   </body>
-
 </html>

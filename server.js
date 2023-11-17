@@ -1,4 +1,5 @@
 const express = require("express");
+const methodOverride = require('method-override');
 const app = express();
 const path = require("path");
 const cors = require("cors");
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 // Custom Middleware Function
 app.use(logger);
 app.use(cors(corsOptions));
+app.use(methodOverride('_method'));
 
 // Built in middleware functions in express
 app.use(express.urlencoded({ extended: false }));

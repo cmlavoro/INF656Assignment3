@@ -45,7 +45,7 @@ const createNewContact = (req, res) => {
   }
 
   data.setContacts([...data.contacts, newContact]);
-  res.status(201).json(data.contacts).redirect(201, "/");
+  res.redirect("/?s=0");
 };
 
 //Update a Contact
@@ -56,11 +56,33 @@ const updateContact = (req, res) => {
       .status(400)
       .json({ message: `Contact ${req.body.id} is not found` });
   }
-  if (req.body.Name) contact.Name = req.body.Name;
-  if (req.body.Phone) contact.Phone = req.body.Phone;
-  if (req.body.Email) contact.Email = req.body.Email;
-  if (req.body.Address) contact.Address = req.body.Address;
 
+  var somethingHasChanged = false;
+
+  if (req.body.Name && req.body.Name != contact.Name) 
+  {
+     contact.Name = req.body.Name;
+     somethingHasChanged = true;
+  }
+
+  if (req.body.Phone && req.body.Phone != contact.Phone) 
+  {
+     contact.Phone = req.body.Phone;
+     somethingHasChanged = true;
+  }
+
+  if (req.body.Email && req.body.Email != contact.Email) 
+  {
+     contact.Email = req.body.Email;
+     somethingHasChanged = true;
+  }
+
+  if (req.body.Address && req.body.Address != contact.Address) 
+  {
+     contact.Address = req.body.Address;
+     somethingHasChanged = true;
+  }
+  
   const filteredArray = data.contacts.filter(
     (c) => c.id !== parseInt(req.body.id)
   );
@@ -69,7 +91,15 @@ const updateContact = (req, res) => {
   data.setContacts(
     unsortedArray.sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0))
   );
-  res.json(data.contacts);
+
+  if(somethingHasChanged) 
+  {
+    res.redirect("/?s=1");
+  }
+  else
+  {
+    res.redirect("/");
+  }
 };
 
 //Delete a Contact

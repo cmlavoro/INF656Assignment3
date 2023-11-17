@@ -1,0 +1,21 @@
+11-16-2023	11:13:13 	 aa9d38cc-9061-4c2d-985c-80fab31fa911 	 Error Cannot set headers after they are sent to the client 
+11-16-2023	11:16:51 	 b057ff42-7171-4fac-8bf3-19fe996a7bb3 	 TypeError path must be a string to res.sendFile 
+11-16-2023	11:28:59 	 2e43b6e0-6ccc-4caa-bd31-d0a699479d47 	 Error Cannot set headers after they are sent to the client 
+11-16-2023	11:30:16 	 210bfe8e-d859-4df4-95fb-8f43081e3740 	 Error Cannot set headers after they are sent to the client 
+11-16-2023	11:30:22 	 2539d7d8-5635-4e9b-b788-c830ad832c21 	 Error Cannot set headers after they are sent to the client 
+11-16-2023	11:37:36 	 cc198ad7-8e9a-4a6d-a2bd-c806cbb5af81 	 Error Cannot set headers after they are sent to the client 
+11-16-2023	11:38:34 	 17ab1f9e-c4df-4917-b12f-50a1d03232cb 	 Error Cannot set headers after they are sent to the client 
+11-16-2023	11:54:32 	 3323a1a4-997b-4472-ac29-67dbd6fb9f54 	 Error Cannot set headers after they are sent to the client 
+11-16-2023	11:55:14 	 68dba5df-4cfd-4bdb-adfe-abb37a6923d2 	 Error Cannot set headers after they are sent to the client 
+11-16-2023	11:58:21 	 96451cb0-d54f-4a69-bc53-f9dd43fe8df1 	 TypeError alert is not a function 
+11-17-2023	12:09:19 	 8e5269a7-38cb-49af-9eab-7f4edecd33af 	 Error Cannot set headers after they are sent to the client 
+11-17-2023	12:10:04 	 77303810-6761-40ea-a8c3-b0b0b65afc60 	 Error Cannot set headers after they are sent to the client 
+11-17-2023	12:10:26 	 c6fa0fbc-338b-419c-b68d-39cb61d8ae62 	 Error Cannot set headers after they are sent to the client 
+11-17-2023	12:12:30 	 2993be10-8fda-460d-91f7-6c47cc4a4e41 	 Error Cannot set headers after they are sent to the client 
+11-17-2023	12:33:31 	 dade8974-8a98-4b8e-a1a1-1cd915b502ad 	 Error Cannot set headers after they are sent to the client 
+11-17-2023	12:34:06 	 3b261189-eb99-4610-8567-c844c07d5485 	 Error Cannot set headers after they are sent to the client 
+11-17-2023	12:34:44 	 2c073147-5797-44e3-8619-b2adf13e2c18 	 TypeError path must be a string to res.sendFile 
+11-17-2023	12:35:12 	 2460bfa7-5be5-4b78-9f16-6a8299b7715b 	 TypeError path must be a string to res.sendFile 
+11-17-2023	12:35:46 	 118f80e9-9599-41e9-b623-24d1ba97940f 	 Error Cannot set headers after they are sent to the client 
+11-17-2023	12:48:26 	 90eb92c8-4469-4b31-98af-795376a4585d 	 Error Cannot set headers after they are sent to the client 
+11-17-2023	12:48:44 	 a5c44924-f3b6-463c-ab4a-90dd4532df20 	 Error Cannot set headers after they are sent to the client 

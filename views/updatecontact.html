@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Contact</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="text/javascript">
+
+        let url = document.URL;
+        let id = url.substring(url.lastIndexOf('/') + 1);
+        url = `http://localhost:3000/contact/${id}`;
+  
+        fetch(url)
+          .then((res) => res.json())
+          .then((contact) => {
+            document.getElementById("id").value = contact.id;
+            document.getElementById("Name").value = contact.Name;
+            document.getElementById("Phone").value = contact.Phone;
+            document.getElementById("Email").value = contact.Email;
+            document.getElementById("Address").value = contact.Address;
+          })
+          .catch((err) => {
+            throw err;
+          });
+      </script>
+  </head>
+
+  <body>
+    <h1 style="text-align: center">Update Contact</h1>
+    <div style="text-align: center">
+      <button class="myButton" onclick="location.href='/'">
+        Return to Contacts List
+      </button>
+    </div>
+
+    <div>
+      <form
+        action="http://localhost:3000/contact?_method=PUT"
+        method="POST"
+        target="_self"
+      >
+        <table>
+          <tbody>
+            <tr>
+                <td style="text-align: right;vertical-align: bottom;"><label for="Name">Id:</label></td>
+                <td><input type="text" id="id" name="id" style="background-color:gray;" readonly/></td>
+              </tr>
+            <tr>
+              <td style="text-align: right;vertical-align: bottom;"><label for="Name">Name:</label></td>
+              <td><input type="text" id="Name" name="Name" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;vertical-align: bottom;"><label for="Phone">Phone:</label></td>
+              <td><input type="text" id="Phone" name="Phone" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;vertical-align: bottom;"><label for="Email">Email:</label></td>
+              <td><input type="text" id="Email" name="Email" /></td>
+            </tr>
+            <tr>
+              <td style="text-align: right;vertical-align: bottom;"><label for="Address">Address:</label></td>
+              <td><input type="text" id="Address" name="Address" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="text-align: center">
+          <input type="submit" class="submitButton" value="Update" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

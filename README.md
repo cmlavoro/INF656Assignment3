@@ -12,3 +12,7 @@ Select a contact from the list, and additional information will be displayed.
 Select the Return to Contacts List button to return to the main list of contacts.
 
 Select the Add New Contact button and complete the form to add a new Contact record.
+
+Select a contact from the list, and update information about the contact.
+
+When creating a new contact or updating information about an existing contact, a success message appears with the specific save type.
