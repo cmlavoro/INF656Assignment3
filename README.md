@@ -18,3 +18,5 @@ Select a contact from the list, and update information about the contact.
 When creating a new contact or updating information about an existing contact, a success message appears with the specific save type.
 
 To delete a contact, select a contact from the list, press the red Delete button, then OK to confirm deletion. A success message will appear on the main list after deletion that the contact was deleted.
+
+Email and Phone number format validation is in place. If an Email address or Phone number format is invalid, the system will prevent the creation or update of a Contact.
