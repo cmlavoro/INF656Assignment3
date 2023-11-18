@@ -44,6 +44,16 @@ const createNewContact = (req, res) => {
     return res.redirect("/400");
   }
 
+  var phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if (!newContact.Phone.match(phoneRegex)) {
+    return res.redirect("/phoneinvalid");
+  }
+
+  var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (!newContact.Email.match(emailRegex)) {
+    return res.redirect("/emailinvalid");
+  } 
+
   data.setContacts([...data.contacts, newContact]);
   res.redirect("/?s=0");
 };
@@ -59,30 +69,39 @@ const updateContact = (req, res) => {
 
   var somethingHasChanged = false;
 
-  if (req.body.Name && req.body.Name != contact.Name) 
+  if (req.body.Name && req.body.Name != contact.Name)
   {
-     contact.Name = req.body.Name;
-     somethingHasChanged = true;
+    contact.Name = req.body.Name;
+    somethingHasChanged = true;
   }
 
-  if (req.body.Phone && req.body.Phone != contact.Phone) 
+  if (req.body.Phone && req.body.Phone != contact.Phone)
   {
-     contact.Phone = req.body.Phone;
-     somethingHasChanged = true;
+    var phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (!req.body.Phone.match(phoneRegex)) {
+      return res.redirect("/phoneinvalid");
+    }
+
+    contact.Phone = req.body.Phone;
+    somethingHasChanged = true;
   }
 
-  if (req.body.Email && req.body.Email != contact.Email) 
+  if (req.body.Email && req.body.Email != contact.Email)
   {
-     contact.Email = req.body.Email;
-     somethingHasChanged = true;
+    var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!req.body.Email.match(emailRegex)) {
+      return res.redirect("/emailinvalid");
+    } 
+    contact.Email = req.body.Email;
+    somethingHasChanged = true;
   }
 
-  if (req.body.Address && req.body.Address != contact.Address) 
+  if (req.body.Address && req.body.Address != contact.Address)
   {
-     contact.Address = req.body.Address;
-     somethingHasChanged = true;
+    contact.Address = req.body.Address;
+    somethingHasChanged = true;
   }
-  
+
   const filteredArray = data.contacts.filter(
     (c) => c.id !== parseInt(req.body.id)
   );
@@ -92,7 +111,7 @@ const updateContact = (req, res) => {
     unsortedArray.sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0))
   );
 
-  if(somethingHasChanged) 
+  if(somethingHasChanged)
   {
     res.redirect("/?s=1");
   }

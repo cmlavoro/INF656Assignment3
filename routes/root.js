@@ -10,6 +10,14 @@ router.get("/newcontact", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "views", "newcontact.html"));
 });
 
+router.get("/phoneinvalid", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "views", "phoneinvalid.html"));
+});
+
+router.get("/emailinvalid", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "views", "emailinvalid.html"));
+});
+
 router.get("/updatecontact/:id", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "views", "updatecontact.html"));
 });
