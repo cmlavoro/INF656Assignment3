@@ -1,6 +1,8 @@
 
 const {writeFile} = require("fs");
 
+const validate = require("../middleware/formValidation.js");
+
 const data = {
   contacts: require("../model/contacts.json"),
   setContacts(data) {
@@ -29,6 +31,10 @@ const getAllContacts = (req, res) => {
 
 //Create a Contact
 const createNewContact = (req, res) => {
+
+  const validationResponse = validate.FormValid(req.body);
+  if (validationResponse != true) return res.redirect(validationResponse);
+
   const newId = data.contacts?.length
     ? data.contacts[data.contacts.length - 1].id + 1
     : 1;
@@ -39,27 +45,13 @@ const createNewContact = (req, res) => {
     Email: req.body.Email,
     Address: req.body.Address,
   };
-
-  if (!newContact.Name || !newContact.Phone || !newContact.Email) {
-    return res.redirect("/400");
-  }
-
-  var phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-  if (!newContact.Phone.match(phoneRegex)) {
-    return res.redirect("/phoneinvalid");
-  }
-
-  var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (!newContact.Email.match(emailRegex)) {
-    return res.redirect("/emailinvalid");
-  } 
-
   data.setContacts([...data.contacts, newContact]);
   res.redirect("/?s=0");
 };
 
 //Update a Contact
 const updateContact = (req, res) => {
+
   const contact = data.contacts.find((c) => c.id === parseInt(req.body.id));
   if (!contact) {
     return res
@@ -67,36 +59,30 @@ const updateContact = (req, res) => {
       .json({ message: `Contact ${req.body.id} is not found` });
   }
 
+  const validationResponse = validate.FormValid(req.body);
+  if (validationResponse != true) return res.redirect(validationResponse);
+
   var somethingHasChanged = false;
 
-  if (req.body.Name && req.body.Name != contact.Name)
+  if (req.body.Name != contact.Name)
   {
     contact.Name = req.body.Name;
     somethingHasChanged = true;
   }
 
-  if (req.body.Phone && req.body.Phone != contact.Phone)
+  if (req.body.Phone != contact.Phone)
   {
-    var phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    if (!req.body.Phone.match(phoneRegex)) {
-      return res.redirect("/phoneinvalid");
-    }
-
     contact.Phone = req.body.Phone;
     somethingHasChanged = true;
   }
 
-  if (req.body.Email && req.body.Email != contact.Email)
+  if (req.body.Email != contact.Email)
   {
-    var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (!req.body.Email.match(emailRegex)) {
-      return res.redirect("/emailinvalid");
-    } 
     contact.Email = req.body.Email;
     somethingHasChanged = true;
   }
 
-  if (req.body.Address && req.body.Address != contact.Address)
+  if (req.body.Address != contact.Address)
   {
     contact.Address = req.body.Address;
     somethingHasChanged = true;
