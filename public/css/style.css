@@ -67,6 +67,23 @@ a {
   cursor: pointer;
 }
 
+.deleteButton {
+  background-color: red;
+  color: white;
+  border: 5px solid #0088cc;
+  border-radius: 15px;
+  padding: 10px;
+  width: 100px;
+  text-align: center !important;
+  align-content: center;
+}
+
+.deleteButton:hover {
+  background-color: darkred;
+  color: white;
+  cursor: pointer;
+}
+
 input[type=text]
 {
    height: 40px; 

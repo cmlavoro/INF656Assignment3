@@ -16,3 +16,5 @@ Select the Add New Contact button and complete the form to add a new Contact rec
 Select a contact from the list, and update information about the contact.
 
 When creating a new contact or updating information about an existing contact, a success message appears with the specific save type.
+
+To delete a contact, select a contact from the list, press the red Delete button, then OK to confirm deletion. A message success message will appear on the main list after deletion that the contact was deleted.

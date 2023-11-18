@@ -114,7 +114,7 @@ const deleteContact = (req, res) => {
     (c) => c.id !== parseInt(req.body.id)
   );
   data.setContacts([...filteredArray]);
-  res.json(data.contacts);
+  res.redirect("/?s=2");
 };
 
 //Get a Contact

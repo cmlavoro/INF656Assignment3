@@ -36,8 +36,11 @@
                 {
                   document.getElementById("dvSaveResult").innerHTML = "<br/>New Contact Created!";
                 }
-                else {
+                else if(saveType == '1') {
                   document.getElementById("dvSaveResult").innerHTML = "<br/>Contact Information Updated!";
+                }
+                else{
+                  document.getElementById("dvSaveResult").innerHTML = "<br/>Contact Deleted!";
                 }
               }
             }     

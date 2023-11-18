@@ -24,6 +24,13 @@
           .catch((err) => {
             throw err;
           });
+
+          function VerifyDeletion()
+          {
+            const remove = confirm(`Are you sure you want to delete ${document.getElementById("Name").value}?`);
+            if(remove) location.href=`/deletecontact/${document.getElementById("id").value}`;
+          }
+
       </script>
   </head>
 
@@ -66,7 +73,17 @@
           </tbody>
         </table>
         <div style="text-align: center">
-          <input type="submit" class="submitButton" value="Update" />
+          <div style="display:inline-block">
+            <input type="submit" class="submitButton" value="Update" />
+          </div>
+          <div style="display:inline-block">
+            &nbsp;
+          </div>
+          <div style="display:inline-block">
+            <button class="deleteButton" onclick="VerifyDeletion();return false;">
+              Delete
+            </button>
+          </div>
         </div>
       </form>
     </div>
