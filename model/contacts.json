@@ -11,14 +11,14 @@
         "Name": "Jack Nicklaus",
         "Phone": "954-772-7923",
         "Email": "jnicklaus@pga.com",
-        "Address": "456 Bourbon Blvd"
+        "Address": "456 Bourbon Blvdz"
     },
     {
         "id": 3,
         "Name": "Tom Kite",
         "Phone": "786-344-2491",
         "Email": "tkite@pga.com",
-        "Address": "789 5th Avenuea"
+        "Address": "789 5th Avenue"
     },
     {
         "id": 4,
