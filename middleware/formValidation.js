@@ -6,9 +6,9 @@ const EmailFormat = (email) => email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\
 
 const FormValid = (req, res) => {
 
-    if (!HasAllData(req)) return "/400";
-    if (!PhoneFormat(req.Phone)) return "/phoneinvalid";
-    if (!EmailFormat(req.Email)) return "/emailinvalid";
+    if (!HasAllData(req))        return("/400");
+    if (!PhoneFormat(req.Phone)) return("/phoneinvalid");
+    if (!EmailFormat(req.Email)) return("/emailinvalid");
 
     return true;
 }

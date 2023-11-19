@@ -32,9 +32,6 @@ const getAllContacts = (req, res) => {
 //Create a Contact
 const createNewContact = (req, res) => {
 
-  const validationResponse = validate.FormValid(req.body);
-  if (validationResponse != true) return res.redirect(validationResponse);
-
   const newId = data.contacts?.length
     ? data.contacts[data.contacts.length - 1].id + 1
     : 1;
@@ -58,9 +55,6 @@ const updateContact = (req, res) => {
       .status(400)
       .json({ message: `Contact ${req.body.id} is not found` });
   }
-
-  const validationResponse = validate.FormValid(req.body);
-  if (validationResponse != true) return res.redirect(validationResponse);
 
   var somethingHasChanged = false;
 
