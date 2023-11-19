@@ -19,4 +19,4 @@ When creating a new contact or updating information about an existing contact, a
 
 To delete a contact, select a contact from the list, press the red Delete button, then OK to confirm deletion. A success message will appear on the main list after deletion that the contact was deleted.
 
-Email and Phone number format validation is in place. If an Email address or Phone number format is invalid, the system will prevent the creation or update of a Contact.
+Name, Email, and Phone number data validation is in place. If invalid, the system will prevent the creation or update of a Contact, prior to reaching endpoint handlers.
