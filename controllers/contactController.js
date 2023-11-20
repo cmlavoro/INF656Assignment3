@@ -1,8 +1,6 @@
 
 const {writeFile} = require("fs");
 
-const validate = require("../middleware/formValidation.js");
-
 const data = {
   contacts: require("../model/contacts.json"),
   setContacts(data) {
